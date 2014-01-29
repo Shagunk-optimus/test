@@ -1,0 +1,300 @@
+{
+  "overview": {
+    "hostsgroups": {
+      "state": "CRITICAL",
+      "output": "There are 7 CRITICAL, 1 PENDING Objects",
+      "children": [
+        { "name": "hosts warning", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services WARNING" },
+        { "name": "hosts up", "state": "CRITICAL", "output": "1 hosts PENDING, 4 hosts UP. 1 services CRITICAL, 1 services WARNING, 1 services UNKNOWN, 1 services PENDING, 1 services OK" },
+        { "name": "hosts unknown", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services UNKNOWN" },
+        { "name": "hosts all", "state": "CRITICAL", "output": "4 hosts DOWN, 2 hosts PENDING, 4 hosts UP. 2 services CRITICAL, 2 services WARNING, 2 services UNKNOWN, 2 services PENDING, 2 services OK" },
+        { "name": "hosts critical", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services CRITICAL" },
+        { "name": "hosts ok", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services OK" },
+        { "name": "hosts down", "state": "CRITICAL", "output": "4 hosts DOWN, 1 hosts PENDING, 1 services CRITICAL, 1 services WARNING, 1 services UNKNOWN, 1 services PENDING, 1 services OK" },
+        { "name": "hosts pending", "state": "PENDING", "output": "2 hosts PENDING, 2 services PENDING"}
+      ]
+    },
+    "servicegroups": {
+      "state": "CRITICAL",
+      "output": "There are 2 CRITICAL, 1 WARNING, 1 UNKNOWN, 1 OK, 1 PENDING Objects",
+      "children": [
+        { "name": "group-critical", "state": "CRITICAL", "output": "2 services CRITICAL" },
+        { "name": "group-all", "state": "CRITICAL", "output": "2 services CRITICAL, 2 services WARNING, 2 services UNKNOWN, 2 services PENDING, 2 services OK" },
+        { "name": "group-warning", "state": "WARNING", "output": "2 services WARNING" },
+        { "name": "group-unknown", "state": "UNKNOWN", "output": "2 services UNKNOWN" },
+        { "name": "group-ok", "state": "OK", "output": "2 services OK" },
+        { "name": "group-pending", "state": "PENDING", "output": "2 services PENDING" }
+      ]
+    },
+    "submaps": {
+      "state": "CRITICAL",
+      "output": "There are 4 CRITICAL Objects",
+      "children": [
+        { "name": "servicegroups", "state": "CRITICAL", "output": "There are 2 CRITICAL objects, 1 WARNING objects, 1 UNKNOWN objects, 1 PENDING objects, 1 OK objects" },
+        { "name": "hostsgroups", "state": "CRITICAL", "output": "There are 7 CRITICAL objects, 1 PENDING objects" },
+        { "name": "Hosts_Down", "state": "CRITICAL", "output": "There are 4 CRITICAL objects, 1 PENDING objects" },
+        { "name": "Hosts_Up", "state": "CRITICAL", "output": "There are 1 CRITICAL objects, 1 WARNING objects, 1 UNKNOWN objects, 1 PENDING objects, 1 OK objects" }
+      ]
+    }
+  },
+  "hostsgroups": {
+    "hosts all": {
+      "state": "CRITICAL",
+      "output": "4 hosts DOWN, 2 hosts PENDING, 4 hosts UP. 2 services CRITICAL, 2 services WARNING, 2 services UNKNOWN, 2 services PENDING, 2 services OK",
+      "children": [
+        { "name": "host-down-critical", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services CRITICAL" },
+        { "name": "host-up-critical", "state": "CRITICAL", "output": "The host is UP. 1 services CRITICAL" },
+        { "name": "host-down-unknown", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services UNKNOWN" },
+        { "name": "host-down-warning", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services WARNING" },
+        { "name": "host-down-ok", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services OK" },
+        { "name": "host-up-warning", "state": "WARNING", "output": "The host is UP. 1 services WARNING" },
+        { "name": "host-up-unknown", "state": "UNKNOWN", "output": "The host is UP. 1 services UNKNOWN" },
+        { "name": "host-up-ok", "state": "OK", "output": "The host is UP 1 services OK" },
+        { "name": "host-down-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" },
+        { "name": "host-up-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" }
+      ]
+    },
+    "hosts critical": {
+      "state": "CRITICAL",
+      "output": "1 hosts DOWN, 1 hosts UP. 2 services CRITICAL",
+      "children": [
+        { "name": "host-up-critical", "state": "CRITICAL", "output": "The host is UP. 1 services CRITICAL" },
+        { "name": "host-down-critical", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services CRITICAL" }
+      ]
+    },
+    "hosts ok": {
+      "state": "CRITICAL",
+      "output": "1 hosts DOWN, 1 hosts UP. 2 services OK",
+      "children": [
+        { "name": "host-down-ok", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services OK" },
+        { "name": "host-up-ok", "state": "OK", "output": "The host is UP. 1 service OK" }
+      ]
+    },
+    "hosts pending": {
+      "state": "PENDING",
+      "output": "2 hosts PENDING, 2 services PENDING",
+      "children": [
+        { "name": "host-up-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" },
+        { "name": "host-down-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" }
+      ]
+    },
+    "hosts unknown": {
+      "state": "CRITICAL",
+      "output": "1 hosts DOWN, 1 hosts UP. 2 services UNKNOWN",
+      "children": [
+        { "name": "host-down-unknown", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services UNKNOWN" },
+        { "name": "host-up-unknown", "state": "UNKNOWN", "output": "The host is UP. 1 services UNKNOWN" }
+      ]
+    },
+    "hosts warning": {
+      "state": "CRITICAL",
+      "output": "1 hosts DOWN, 1 hosts UP. 2 services WARNING",
+      "children": [
+        { "name": "host-down-warning", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services WARNING" },
+        { "name": "host-up-warning", "state": "WARNING", "output": "The host is UP. 1 services WARNING" }
+      ]
+    },
+    "hosts up": {
+      "state": "CRITICAL",
+      "output": "1 hosts PENDING, 4 hosts UP. 1 services CRITICAL, 1 services WARNING, 1 services UNKNOWN, 1 services PENDING, 1 services OK",
+      "children": [
+        { "name": "host-up-critical", "state": "CRITICAL", "output": "The host is UP. 1 services CRITICAL" },
+        { "name": "host-up-warning", "state": "WARNING", "output": "The host is UP. 1 services WARNING" },
+        { "name": "host-up-unknown", "state": "UNKNOWN", "output": "The host is UP. 1 services UNKNOWN" },
+        { "name": "host-up-ok", "state": "OK", "output": "The host is UP. 1 services OK" },
+        { "name": "host-up-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" }
+      ]
+    },
+    "hosts down": {
+      "state": "CRITICAL",
+      "output": "4 hosts DOWN, 1 hosts PENDING, 1 services CRITICAL, 1 services WARNING, 1 services UNKNOWN, 1 services PENDING, 1 services OK",
+      "children": [
+        { "name": "host-down-unknown", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services UNKNOWN" },
+        { "name": "host-down-critical", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services CRITICAL" },
+        { "name": "host-down-ok", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services OK" },
+        { "name": "host-down-warning", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services WARNING" },
+        { "name": "host-down-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" }
+      ]
+    }
+  },
+  "servicegroups": {
+    "group-all": {
+      "state": "CRITICAL",
+      "output": "2 services CRITICAL, 2 services WARNING, 2 services UNKNOWN, 2 services PENDING, 2 services OK",
+      "children": [
+        { "name": "host-down-critical", "service_name": "test-critical", "state": "CRITICAL", "output": "CRITICAL" },
+        { "name": "host-up-critical", "service_name": "test-critical", "state": "CRITICAL", "output": "CRITICAL" },
+        { "name": "host-down-warning", "service_name": "test-warning", "state": "WARNING", "output": "WARNING" },
+        { "name": "host-up-warning", "service_name": "test-warning", "state": "WARNING", "output": "WARNING" },
+        { "name": "host-up-unknown", "service_name": "test-unknown", "state": "UNKNOWN", "output": "UNKNOWN" },
+        { "name": "host-down-unknown", "service_name": "test-unknown", "state": "UNKNOWN", "output": "UNKNOWN" },
+        { "name": "host-up-ok", "service_name": "test-ok", "state": "OK", "output": "OK" },
+        { "name": "host-down-ok", "service_name": "test-ok", "state": "OK", "output": "OK" },
+        { "name": "host-down-pending", "service_name": "test-pending", "state": "PENDING", "output": "NA" },
+        { "name": "host-up-pending", "service_name": "test-pending", "state": "PENDING", "output": "NA" }
+      ]
+    },
+    "group-ok": {
+      "state": "OK",
+      "output": "2 services OK",
+      "children": [
+        { "name": "host-up-ok", "service_name": "test-ok", "state": "OK", "output": "OK" },
+        { "name": "host-down-ok", "service_name": "test-ok", "state": "OK", "output": "OK" }
+      ]
+    },
+    "group-warning": {
+      "state": "WARNING",
+      "output": "2 services WARNING",
+      "children": [
+        { "name": "host-up-warning", "service_name": "test-warning", "state": "WARNING", "output": "WARNING" },
+        { "name": "host-down-warning", "service_name": "test-warning", "state": "WARNING", "output": "WARNING" }
+      ]
+    },
+    "group-critical": {
+      "state": "CRITICAL",
+      "output": "2 services CRITICAL",
+      "children": [
+        { "name": "host-up-critical", "service_name": "test-critical", "state": "CRITICAL", "output": "CRITICAL" },
+        { "name": "host-down-critical", "service_name": "test-critical", "state": "CRITICAL", "output": "CRITICAL" }
+      ]
+    },
+    "group-unknown": {
+      "state": "UNKNOWN",
+      "output": "2 services UNKNOWN",
+      "children": [
+        { "name": "host-up-unknown", "service_name": "test-unknown", "state": "UNKNOWN", "output": "UNKNOWN" },
+        { "name": "host-down-unknown", "service_name": "test-unknown", "state": "UNKNOWN", "output": "UNKNOWN" }
+      ]
+    },
+    "group-pending": {
+      "state": "PENDING",
+      "output": "2 services PENDING",
+      "children": [
+        { "name": "host-up-pending", "service_name": "test-pending", "state": "PENDING", "output": "NA" },
+        { "name": "host-down-pending", "service_name": "test-pending", "state": "PENDING", "output": "NA"}
+      ]
+    }
+  },
+  "submaps": {
+    "Hosts_Up": {
+      "state": "CRITICAL",
+      "output": "There are 1 CRITICAL objects, 1 WARNING objects, 1 UNKNOWN objects, 1 PENDING objects, 1 OK objectsThere are 1 CRITICAL, 1 WARNING, 1 UNKNOWN, 1 OK, 1 PENDING Objects",
+      "children": [
+        { "name": "host-up-critical", "state": "CRITICAL", "output": "The host is UP. 1 services CRITICAL" },
+        { "name": "host-up-warning", "state": "WARNING", "output": "The host is UP. 1 services WARNING" },
+        { "name": "host-up-unknown", "state": "UNKNOWN", "output": "The host is UP. 1 services UNKNOWN" },
+        { "name": "host-up-ok", "state": "OK", "output": "The host is UP. 1 services OK" },
+        { "name": "host-up-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING"}
+      ]
+    },
+    "Hosts_Down": {
+      "state": "CRITICAL",
+      "output": "There are 4 CRITICAL objects, 1 PENDING objects, There are 4 CRITICAL, 1 PENDING Objects",
+      "children": [
+        { "name": "host-down-unknown", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services UNKNOWN" },
+        { "name": "host-down-ok", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services OK" },
+        { "name": "host-down-critical", "state": "CRITICAL", "output": " The host is UNSCHEDULED DOWN. 1 services CRITICAL" },
+        { "name": "host-down-warning", "state": "CRITICAL", "output": "The host is UNSCHEDULED DOWN. 1 services WARNING" },
+        { "name": "host-down-pending", "state": "PENDING", "output": "The host is PENDING. 1 services PENDING" }
+      ]
+    },
+    "hostgroups": {
+      "state": "CRITICAL",
+      "output": "There are 7 CRITICAL objects, 1 PENDING objects, There are 7 CRITICAL, 1 PENDING Objects",
+      "children": [
+        { "name": "hosts warning", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services WARNING" },
+        { "name": "hosts up", "state": "CRITICAL", "output": "1 hosts PENDING, 4 hosts UP. 1 services CRITICAL, 1 services WARNING, 1 services UNKNOWN, 1 services PENDING, 1 services OK" },
+        { "name": "hosts unknown", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services UNKNOWN" },
+        { "name": "hosts all", "state": "CRITICAL", "output": "4 hosts DOWN, 2 hosts PENDING, 4 hosts UP. 2 services CRITICAL, 2 services WARNING, 2 services UNKNOWN, 2 services PENDING, 2 services OK" },
+        { "name": "hosts critical", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services CRITICAL" },
+        { "name": "hosts ok", "state": "CRITICAL", "output": "1 hosts DOWN, 1 hosts UP. 2 services OK" },
+        { "name": "hosts down", "state": "CRITICAL", "output": "4 hosts DOWN, 1 hosts PENDING, 1 services CRITICAL, 1 services WARNING, 1 services UNKNOWN, 1 services PENDING, 1 services OK" },
+        { "name": "hosts pending", "state": "PENDING", "output": "2 hosts PENDING, 2 services PENDING" }
+      ]
+    },
+    "servicegroups": {
+      "state": "CRITICAL",
+      "output": "There are 2 CRITICAL objects, 1 WARNING objects, 1 UNKNOWN objects, 1 PENDING objects, 1 OK objectsThere are 2 CRITICAL, 1 WARNING, 1 UNKNOWN, 1 OK, 1 PENDING Objects",
+      "children": [
+        { "name": "group-critical", "state": "CRITICAL", "output": "2 services CRITICAL" },
+        { "name": "group-all", "state": "CRITICAL", "output": "2 services CRITICAL, 2 services WARNING, 2 services UNKNOWN, 2 services PENDING, 2 services OK" },
+        { "name": "group-warning", "state": "WARNING", "output": "2 services WARNING" },
+        { "name": "group-unknown", "state": "UNKNOWN", "output": "2 services UNKNOWN" },
+        { "name": "group-ok", "state": "OK", "output": "2 services OK" },
+        { "name": "group-pending", "state": "PENDING", "output": "2 services PENDING" }
+      ]
+    }
+  },
+  "Hosts_UP": {
+    "host-up-ok": {
+      "state": "UP",
+      "output": "OK - 127.0.1.0: rta",
+      "perfdata": "",
+      "current attempt": "1/3",
+      "last check": "2013-01-03",
+      "next check": "2013-01-03",
+      "last state change": "2013-01-03 13:47:13",
+      "summary state": "OK",
+      "summary output": "The Host is UP. There are 1 OK Services",
+      "children": [
+        { "name": "test-ok", "state": "OK", "output": "OK" }
+      ]
+    },
+    "host-up-warning": {
+      "state": "UP",
+      "output": "OK - 127.0.1.1: rta",
+      "perfdata": "",
+      "current attempt": "1/3",
+      "last check": "2013-01-03",
+      "next check": "2013-01-03",
+      "last state change": "2013-01-03 13:44:07",
+      "summary state": "WARNING",
+      "summary output": "The Host is UP. There are 1 WARNING Services",
+      "children": [
+        { "name": "test-warning", "state": "WARNING", "output": "WARNING" }
+      ]
+    },
+    "host-up-critical": {
+      "state": "UP",
+      "output": "OK - 127.0.1.2: rta",
+      "perfdata": "",
+      "current attempt": "1/3",
+      "last check": "2013-01-03",
+      "next check": "2013-01-03",
+      "last state change": "2013-01-03",
+      "summary state": "CRITICAL",
+      "summary output": "The Host is UP. There are 1 CRITICAL Services",
+      "children": [
+        { "name": "test-critical", "state": "CRITICAL", "output": "CRITICAL" }
+      ]
+    },
+    "host-up-unknown": {
+      "state": "UP",
+      "output": "OK - 127.0.1.3: rta",
+      "perfdata": "",
+      "current attempt": "1/3",
+      "last check": "2013-01-03",
+      "next check": "2013-01-03",
+      "last state change": "2013-01-03",
+      "summary state": "UNKNOWN",
+      "summary output": "The Host is UP. There are 1 UNKNOWN Services",
+      "children": [
+        { "name": "test-unknown", "state": "UNKNOWN", "output": "UNKNOWN" }
+      ]
+    },
+    "host-up-pending": {
+      "state": "PENDING",
+      "output": "NA",
+      "perfdata": "",
+      "current attempt": "1/3",
+      "last check": "N/A",
+      "next check": "N/A",
+      "last state change": "2013-01-03",
+      "summary state": "PENDING",
+      "summary output": "The Host is PENDING. There are 1 PENDING Services",
+      "children": [
+        { "name": "test-pending", "state": "PENDING", "output": "NA" }
+      ]
+    }
+  }
+}

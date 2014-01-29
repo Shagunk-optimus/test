@@ -1,0 +1,3 @@
+The purpose for upgrade_view_test is to check after an upgrade that all the hosts, services are still there.
+So it would be a verifier test, it wont create any host,service or custom group.
+This is the first approach, I'm sure we'll have to add more things to test but we have to start from here.

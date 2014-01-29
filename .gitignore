@@ -1,0 +1,9 @@
+features/.cucumber/stepdefs.json
+results.html
+screenshots/*
+lib/browsermob-proxy-2.0-beta-6/*
+results/*
+run.har
+junit/*
+hars/*
+chromedriver.log
